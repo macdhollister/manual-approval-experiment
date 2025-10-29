@@ -33,7 +33,7 @@ jobs:
         uses: trstringer/manual-approval@v1
         with:
           secret: ${{ github.TOKEN }}
-          approvers: mac-hollister
+          approvers: macdhollister
           issue-title: "Liquibase SQL Approval"
           minimum-approvals: 1
           issue-body: |
