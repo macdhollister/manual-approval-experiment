@@ -32,13 +32,13 @@ jobs:
       - name: Manual approval
         uses: trstringer/manual-approval@v1
         with:
-          approvers: mac-hollister       # change to your approvers list
+          secret: ${{ github.TOKEN }}
+          approvers: mac-hollister
           issue-title: "Liquibase SQL Approval"
+          minimum-approvals: 1
           issue-body: |
             **Liquibase update-sql output:**
 
             ```
             ${{ steps.liquibase.outputs.body }}
             ```
-
-          minimum-approvals: 1
